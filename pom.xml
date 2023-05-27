@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>edu.fiuba.algo3</groupId>
+    <groupId>edu.fiuba.HorizonProyect</groupId>
     <artifactId>tp2</artifactId>
     <version>0.0.1</version>
     <properties>
@@ -13,7 +13,7 @@
         <maven-surefire-version>3.0.0-M3</maven-surefire-version>
         <archunit-version>0.21.0</archunit-version>
         <javafx-version>15.0.1</javafx-version>
-        <main-class>edu.fiuba.ProyectoHorizon.Main</main-class>
+        <main-class>edu.fiuba.HorizonProject.Main</main-class>
     </properties>
     <dependencies>
         <dependency>
@@ -71,7 +71,7 @@
         </profile>
     </profiles>
     <build>
-        <testSourceDirectory>src/test</testSourceDirectory>
+        <testSourceDirectory>src/main/test</testSourceDirectory>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -86,7 +86,7 @@
                 <artifactId>javafx-maven-plugin</artifactId>
                 <version>0.0.6</version>
                 <configuration>
-                    <mainClass>edu.fiuba.algo3/${main-class}</mainClass>
+                    <mainClass>edu.fiuba.HorizonProject/${main-class}</mainClass>
                 </configuration>
             </plugin>
             <plugin>

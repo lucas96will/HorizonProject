@@ -1,6 +1,6 @@
-package edu.fiuba.ProyectoHorizon.entrega_2;
+package edu.fiuba.HorizonProject.entrega_2;
 
-import edu.fiuba.ProyectoHorizon.modelo.Message;
+import edu.fiuba.HorizonProject.modelo.Message;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

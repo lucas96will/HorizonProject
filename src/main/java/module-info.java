@@ -1,4 +1,4 @@
-module edu.fiuba.ProyectoHorizon {
+module edu.fiuba.HorizonProject {
     requires javafx.controls;
-    exports edu.fiuba.ProyectoHorizon;
+    exports edu.fiuba.HorizonProject;
 }

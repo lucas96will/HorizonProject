@@ -1,4 +1,4 @@
-package edu.fiuba.ProyectoHorizon;
+package edu.fiuba.HorizonProject;
 
 import javafx.application.Application;
 import javafx.scene.Scene;

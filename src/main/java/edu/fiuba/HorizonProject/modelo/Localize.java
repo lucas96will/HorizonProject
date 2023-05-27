@@ -1,4 +1,4 @@
-package edu.fiuba.ProyectoHorizon.modelo;
+package edu.fiuba.HorizonProject.modelo;
 
 public class Localize {
     protected final String esContent;

@@ -1,4 +1,4 @@
-package edu.fiuba.ProyectoHorizon.architecture;
+package edu.fiuba.HorizonProject.architecture;
 
 import com.tngtech.archunit.core.domain.JavaClasses;
 import com.tngtech.archunit.core.importer.ClassFileImporter;
@@ -14,7 +14,7 @@ public class ModelDependenciesTest {
 
     @Test
     public void elModeloSoloPuedeReferenciarClasesDelModeloAdemasJavaAdemasJunit() {
-        JavaClasses importedClasses = new ClassFileImporter().importPackages("edu.fiuba.algo3.modelo");
+        JavaClasses importedClasses = new ClassFileImporter().importPackages("edu.fiuba.HorizonProyect.modelo");
 
         String[] listOfPackages = {MODEL, JAVA_LANG, JUNIT};
 

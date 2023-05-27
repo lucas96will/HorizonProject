@@ -1,4 +1,4 @@
-package edu.fiuba.ProyectoHorizon.modelo;
+package edu.fiuba.HorizonProject.modelo;
 
 public class Message extends Localize {
 
