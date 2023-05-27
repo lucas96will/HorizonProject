@@ -14,7 +14,7 @@ public class ModelDependenciesTest {
 
     @Test
     public void elModeloSoloPuedeReferenciarClasesDelModeloAdemasJavaAdemasJunit() {
-        JavaClasses importedClasses = new ClassFileImporter().importPackages("edu.fiuba.HorizonProyect.modelo");
+        JavaClasses importedClasses = new ClassFileImporter().importPackages("edu.fiuba.HorizonProject.modelo");
 
         String[] listOfPackages = {MODEL, JAVA_LANG, JUNIT};
 

@@ -1,6 +1,6 @@
 ignore:
-  - "src/main/java/edu/fiuba/HorizonProyect/controlador"
-  - "src/main/java/edu/fiuba/HorizonProyect/vista"
-  - "src/main/java/edu/fiuba/HorizonProyect/App.java"
-  - "src/main/java/edu/fiuba/HorizonProyect/Main.java"
-  - "src/main/java/edu/fiuba/HorizonProyect/SystemInfo.java"
+  - "src/main/java/edu/fiuba/HorizonProject/controlador"
+  - "src/main/java/edu/fiuba/HorizonProject/vista"
+  - "src/main/java/edu/fiuba/HorizonProject/App.java"
+  - "src/main/java/edu/fiuba/HorizonProject/Main.java"
+  - "src/main/java/edu/fiuba/HorizonProject/SystemInfo.java"
