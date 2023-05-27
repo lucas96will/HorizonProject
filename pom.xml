@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>edu.fiuba.algo3</groupId>
     <artifactId>tp2</artifactId>
-    <version>0.0.3.1</version>
+    <version>0.0.1</version>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>11</maven.compiler.source>
@@ -13,7 +13,7 @@
         <maven-surefire-version>3.0.0-M3</maven-surefire-version>
         <archunit-version>0.21.0</archunit-version>
         <javafx-version>15.0.1</javafx-version>
-        <main-class>edu.fiuba.edu.fiuba.ProyectoHorizon.Main</main-class>
+        <main-class>edu.fiuba.ProyectoHorizon.Main</main-class>
     </properties>
     <dependencies>
         <dependency>
@@ -71,7 +71,7 @@
         </profile>
     </profiles>
     <build>
-        <testSourceDirectory>src/main/test</testSourceDirectory>
+        <testSourceDirectory>src/test</testSourceDirectory>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
