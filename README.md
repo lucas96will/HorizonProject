@@ -6,7 +6,7 @@ Proyecto de juego rpg
 
 ## Grupo {N}
 
-* **Integrante 1** - [lucas williams](https://github.com/lucas96will)
+* **Integrante** - [lucas williams](https://github.com/lucas96will)
 
 
 ## Aplicación
