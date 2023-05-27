@@ -1,0 +1,51 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Jugador
+interface Vocacion
+class Druida
+class Mago
+class Guerrero
+class Arquero
+
+
+Vocacion <.. Druida
+Vocacion <.. Mago
+Vocacion <.. Guerrero
+Vocacion <.. Arquero
+
+Vocacion <- Jugador
+
+class Mapa
+interface Terreno
+interface ObjetoInamovible
+interface ObjetoMovible
+class TerrenoInamovible
+class TerrenoMovible
+
+TerrenoInamovible ..> Terreno
+TerrenoInamovible ..> ObjetoInamovible
+TerrenoMovible ..> Terreno
+TerrenoMovible ..> ObjetoMovible
+
+Mapa --> Terreno
+Mapa --> Jugador
+Mapa --> NPC
+
+
+interface NPC
+class Monster
+class NPCGuide
+
+NPC <.. Monster
+NPC <.. NPCGuide
+
+class Posicion
+
+Jugador --> Posicion
+NPC --> Posicion
+Terreno --> Posicion
+
+Mapa <-- Posicion
+
+@enduml
