@@ -2,7 +2,7 @@
 
 # Proyecto: {Horizon} 
 
-Proyecto de juego rpg
+Proyecto de juego rpg en desarrollo.
 
 ## Grupo {N}
 
