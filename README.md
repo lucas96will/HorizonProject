@@ -1,4 +1,4 @@
-![tp2](https://github.com/lucas96will/HorizonProject/actions/workflows/build.yml/badge.svg) [![codecov](https://codecov.io/gh/lucas96will/HorizonProject/branch/master/graph/badge.svg)](https://codecov.io/gh/lucas96will/HorizonProyect)
+![tp2](https://github.com/lucas96will/HorizonProject/actions/workflows/build.yml/badge.svg) [![codecov](https://codecov.io/gh/lucas96will/HorizonProject/branch/master/graph/badge.svg)](https://codecov.io/gh/lucas96will/HorizonProject)
 
 # Proyecto: {Horizon} 
 
