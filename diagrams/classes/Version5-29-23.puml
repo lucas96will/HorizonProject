@@ -1,0 +1,37 @@
+@startuml
+class edu.fiuba.HorizonProject.modelo.TerrenoNoHabitable {
+}
+interface edu.fiuba.HorizonProject.modelo.ElementoMapa {
+}
+class edu.fiuba.HorizonProject.modelo.Mapa {
+- ArrayList<Terreno> terrenos
+- List<ElementoMapa> elementos
++ boolean contiene(ElementoMapa)
++ void agregar(ElementoMapa)
++ void agregarTerreno(Terreno)
++ boolean contieneTerreno(Terreno)
+}
+class edu.fiuba.HorizonProject.modelo.Jugador {
+}
+class edu.fiuba.HorizonProject.modelo.TerrenoHabitable {
+}
+
+class edu.fiuba.HorizonProject.modelo.NPCGuide {
+}
+class edu.fiuba.HorizonProject.modelo.Monster {
+}
+
+interface edu.fiuba.HorizonProject.modelo.NPC {
+}
+interface edu.fiuba.HorizonProject.modelo.Terreno {
+}
+
+
+edu.fiuba.HorizonProject.modelo.Terreno <|.. edu.fiuba.HorizonProject.modelo.TerrenoNoHabitable
+edu.fiuba.HorizonProject.modelo.ElementoMapa <|.. edu.fiuba.HorizonProject.modelo.Jugador
+edu.fiuba.HorizonProject.modelo.Terreno <|.. edu.fiuba.HorizonProject.modelo.TerrenoHabitable
+edu.fiuba.HorizonProject.modelo.NPC <|.. edu.fiuba.HorizonProject.modelo.NPCGuide
+edu.fiuba.HorizonProject.modelo.ElementoMapa <|.. edu.fiuba.HorizonProject.modelo.Monster
+edu.fiuba.HorizonProject.modelo.NPC <|.. edu.fiuba.HorizonProject.modelo.Monster
+edu.fiuba.HorizonProject.modelo.ElementoMapa <|-- edu.fiuba.HorizonProject.modelo.NPC
+@enduml
