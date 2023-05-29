@@ -1,4 +1,4 @@
 package edu.fiuba.HorizonProject.modelo;
 
-public class Monster implements ElementoMapa {
+public class Monster implements ElementoMapa, NPC {
 }

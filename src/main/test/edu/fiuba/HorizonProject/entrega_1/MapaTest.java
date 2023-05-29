@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class PruebasMapaTest {
+public class MapaTest {
 
     @Test
     public void test01MapaPuedeIniciarseCorrectamente() {
@@ -88,5 +88,56 @@ public class PruebasMapaTest {
         assertFalse(contieneNpc);
     }
 
+    @Test
+    public void test01MapaConVariosMonstersEsCorrecto() {
+        Mapa mapa = new Mapa();
 
+        NPC barbarian = new Monster();
+        NPC skeleton = new Monster();
+        NPC ghost = new Monster();
+
+        mapa.agregar(barbarian);
+        mapa.agregar(skeleton);
+        mapa.agregar(ghost);
+
+        boolean contieneBarbarian = mapa.contiene(barbarian);
+        boolean contieneSkeleton = mapa.contiene(skeleton);
+        boolean contieneGhost = mapa.contiene(ghost);
+
+
+        assertTrue(contieneBarbarian);
+        assertTrue(contieneSkeleton);
+        assertTrue(contieneGhost);
+
+    }
+
+    @Test
+    public void test01MapaSinTerrenoHabitableEsCorrecto() {
+        Mapa mapa = new Mapa();
+
+        boolean contieneTerrenoHabitable = mapa.contieneTerreno(new TerrenoHabitable());
+
+        assertFalse(contieneTerrenoHabitable);
+    }
+
+    @Test
+    public void test01MapaConTerrenoHabitableEsCorrecto() {
+        Mapa mapa = new Mapa();
+
+        Terreno terrenoHabitable = new TerrenoHabitable();
+        mapa.agregarTerreno(terrenoHabitable);
+
+        boolean contieneTerrenoHabitable = mapa.contieneTerreno(terrenoHabitable);
+
+        assertTrue(contieneTerrenoHabitable);
+    }
+
+    @Test
+    public void test01MapaSinTerrenoNoHabitableEsCorrecto() {
+        Mapa mapa = new Mapa();
+
+        boolean contieneTerrenoNoHabitable = mapa.contieneTerreno(new TerrenoNoHabitable());
+
+        assertFalse(contieneTerrenoNoHabitable);
+    }
 }
