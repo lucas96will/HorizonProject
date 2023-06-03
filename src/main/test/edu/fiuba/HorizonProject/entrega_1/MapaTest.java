@@ -140,4 +140,6 @@ public class MapaTest {
 
         assertFalse(contieneTerrenoNoHabitable);
     }
+
+
 }
