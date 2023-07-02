@@ -1,6 +1,10 @@
 package edu.fiuba.HorizonProject.entrega_1;
 
-import edu.fiuba.HorizonProject.modelo.*;
+import edu.fiuba.HorizonProject.modelo.Player.Player;
+import edu.fiuba.HorizonProject.modelo.Map.Map;
+import edu.fiuba.HorizonProject.modelo.NPC.NPC;
+import edu.fiuba.HorizonProject.modelo.NPC.Oracle;
+import edu.fiuba.HorizonProject.modelo.Terrain.Terrain;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
@@ -10,27 +14,27 @@ public class MapaTest {
 
     @Test
     public void test01MapaPuedeIniciarseCorrectamente() {
-        Mapa mapa = new Mapa();
+        Map mapa = new Map();
 
-        boolean contieneJugador = mapa.contiene(new Jugador());
+        boolean contieneJugador = mapa.contiene(new Player());
 
         assertFalse(contieneJugador);
     }
 
     @Test
     public void test01MapaInicialNoTieneJugadores() {
-        Mapa mapa = new Mapa();
+        Map mapa = new Map();
 
-        boolean contieneJugador = mapa.contiene(new Jugador());
+        boolean contieneJugador = mapa.contiene(new Player());
 
         assertFalse(contieneJugador);
     }
 
     @Test
     public void test01MapaConJugadorTieneJugador() {
-        Mapa mapa = new Mapa();
+        Map mapa = new Map();
 
-        Jugador jugador = new Jugador();
+        Player jugador = new Player();
         mapa.agregar(jugador);
 
         boolean contieneJugador = mapa.contiene(jugador);
@@ -40,10 +44,10 @@ public class MapaTest {
 
     @Test
     public void test01MapaConDosJugadorEsCorrecto() {
-        Mapa mapa = new Mapa();
+        Map mapa = new Map();
 
-        Jugador jugadorUno = new Jugador();
-        Jugador jugadorDos = new Jugador();
+        Player jugadorUno = new Player();
+        Player jugadorDos = new Player();
         mapa.agregar(jugadorUno);
         mapa.agregar(jugadorDos);
 
@@ -57,21 +61,21 @@ public class MapaTest {
 
     @Test
     public void test01MapaSinNpcEsCorrecto() {
-        Mapa mapa = new Mapa();
+        Map mapa = new Map();
 
         //NPC npc = new NPCGuide();
         //mapa.agregar(npc);
 
-        boolean contieneNpc = mapa.contiene(new NPCGuide());
+        boolean contieneNpc = mapa.contiene(new Oracle());
 
         assertFalse(contieneNpc);
     }
 
     @Test
     public void test01MapaConNpcEsCorrecto() {
-        Mapa mapa = new Mapa();
+        Map mapa = new Map();
 
-        NPC npc = new NPCGuide();
+        NPC npc = new Oracle();
         mapa.agregar(npc);
 
         boolean contieneNpc = mapa.contiene(npc);
@@ -79,52 +83,24 @@ public class MapaTest {
         assertTrue(contieneNpc);
     }
 
-    @Test
-    public void test01MapaSinMonstersEsCorrecto() {
-        Mapa mapa = new Mapa();
-
-        boolean contieneNpc = mapa.contiene(new Monster());
-
-        assertFalse(contieneNpc);
-    }
-
-    @Test
-    public void test01MapaConVariosMonstersEsCorrecto() {
-        Mapa mapa = new Mapa();
-
-        NPC barbarian = new Monster();
-        NPC skeleton = new Monster();
-        NPC ghost = new Monster();
-
-        mapa.agregar(barbarian);
-        mapa.agregar(skeleton);
-        mapa.agregar(ghost);
-
-        boolean contieneBarbarian = mapa.contiene(barbarian);
-        boolean contieneSkeleton = mapa.contiene(skeleton);
-        boolean contieneGhost = mapa.contiene(ghost);
 
 
-        assertTrue(contieneBarbarian);
-        assertTrue(contieneSkeleton);
-        assertTrue(contieneGhost);
 
-    }
 
     @Test
     public void test01MapaSinTerrenoHabitableEsCorrecto() {
-        Mapa mapa = new Mapa();
+        Map mapa = new Map();
 
-        boolean contieneTerrenoHabitable = mapa.contieneTerreno(new TerrenoHabitable());
+        boolean contieneTerrenoHabitable = mapa.contieneTerreno(new Terrain());
 
         assertFalse(contieneTerrenoHabitable);
     }
 
     @Test
     public void test01MapaConTerrenoHabitableEsCorrecto() {
-        Mapa mapa = new Mapa();
+        Map mapa = new Map();
 
-        Terreno terrenoHabitable = new TerrenoHabitable();
+        Terrain terrenoHabitable = new Terrain();
         mapa.agregarTerreno(terrenoHabitable);
 
         boolean contieneTerrenoHabitable = mapa.contieneTerreno(terrenoHabitable);
@@ -134,9 +110,9 @@ public class MapaTest {
 
     @Test
     public void test01MapaSinTerrenoNoHabitableEsCorrecto() {
-        Mapa mapa = new Mapa();
+        Map mapa = new Map();
 
-        boolean contieneTerrenoNoHabitable = mapa.contieneTerreno(new TerrenoNoHabitable());
+        boolean contieneTerrenoNoHabitable = mapa.contieneTerreno(new Terrain());
 
         assertFalse(contieneTerrenoNoHabitable);
     }
